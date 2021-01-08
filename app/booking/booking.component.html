@@ -1,0 +1,42 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>booking Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Bus Id</th>
+            <th>Route Id</th>
+            <th>payment Status</th>
+            <th>payment</th>
+           
+            <th>passanger Details</th>
+            <th>bookingDateTime </th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of booking |async">
+             <td>{{b.busId.busId}}</td>
+            <td>{{b.routeId.routeId}}</td>
+            <td>{{b.paymentStatus}}</td>
+            <td>{{b.passangerDetails.passangerId}}</td>
+         
+           
+          
+            <td>{{b.totalFare}}</td>
+            <td>{{b.bookingDateTime}}</td>
+         
+      
+   
+         
+            
+           </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+

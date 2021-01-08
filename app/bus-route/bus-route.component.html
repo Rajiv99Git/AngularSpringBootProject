@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="panel-heading">
+        <mat-icon (click)="home()" aria-hidden="false" aria-label="Example home icon">home</mat-icon><br>
+     
+    </div>
+    <mat-card class="card" >
+        <form (ngSubmit)="doSubmitForm()" [formGroup]="formBusRoute"  >
+            <h1 style="text-align: center">Bus Route Form</h1>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>BusId</mat-label>
+                <input matInput placeholder="Enter BusId" formControlName="busId"  [(ngModel)]="routeDetails.busId.busId" required>
+            </mat-form-field>
+<br>
+            <mat-form-field class="field" appearance="outline">
+            <mat-label>Driver Id</mat-label>
+            <input matInput placeholder="Enter DriverId" formControlName="driverId" [(ngModel)]="routeDetails.driver.driverId" required>
+            </mat-form-field>
+<br>
+           
+
+<br>
+                <mat-form-field class="field" appearance="outline">
+                <mat-label>BusRoute</mat-label>
+                <input matInput placeholder="Enter BusRoute" formControlName="busRoute" [(ngModel)]="routeDetails.busRoute" required>
+                </mat-form-field>
+
+<br>
+                <mat-form-field class="field" appearance="outline">
+                <mat-label>StartTime</mat-label>
+                <input matInput placeholder="Enter StartTime" formControlName="startTime" [(ngModel)]="routeDetails.startTime" required>
+                </mat-form-field>
+<br>
+            
+                <mat-form-field class="field" appearance="outline">
+                <mat-label>EndTime</mat-label>
+                <input matInput placeholder="Enter EndTime" formControlName="endTime" [(ngModel)]="routeDetails.endTime" required>
+                </mat-form-field>
+                     
+<br>
+
+              <mat-form-field class="field" appearance="outline">
+                <mat-label>Duration</mat-label>
+                <input matInput placeholder="Enter Duration"  formControlName="duration" [(ngModel)]="routeDetails.duration" required>
+            </mat-form-field>
+<br>
+            <mat-form-field class="field" appearance="outline">
+            <mat-label>AvailableSeats</mat-label>
+            <input matInput placeholder="AvailableSeats"  formControlName="availableSeats" [(ngModel)]="routeDetails.availableSeats" required>
+            </mat-form-field>
+            <br>
+            
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Distance</mat-label>
+                <input matInput placeholder="Distance"  formControlName="distance" [(ngModel)]="routeDetails.distance" required>
+            </mat-form-field>
+            <br>
+
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Source</mat-label>
+                <input matInput placeholder="Source"  formControlName="source" [(ngModel)]="routeDetails.source" required>
+            </mat-form-field>
+
+            <br>
+
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Destination</mat-label>
+                <input matInput placeholder="Destination"  formControlName="destination" [(ngModel)]="routeDetails.destination" required>
+            </mat-form-field>
+           
+            
+
+            <br>
+
+            <div class="text-center">
+
+                <button type="submit" mat-raised-button color="primary" [disabled]="!formBusRoute.valid">submit</button>
+
+                <button type="reset" mat-raised-button color="accent">Reset</button>
+            </div>
+        </form>
+
+    </mat-card>
+</div>

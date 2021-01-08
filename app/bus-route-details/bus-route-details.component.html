@@ -1,0 +1,43 @@
+<h2>Bus Route Details</h2> 
+
+<hr/>
+<div class="container mt-4 ">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-8 block" style="
+  height: 340px;
+  margin-bottom: 28px;
+">
+<div *ngIf="busroute">
+  <div>
+    <label><b>Bus Route: </b></label> {{busroute.busRoute}}
+  </div>
+  <div>
+    <label><b> Start time </b></label> {{busroute.startTime}}
+  </div>
+  <div>
+    <label><b> end time </b></label> {{busroute.endTime}}
+  </div>  
+  <div>
+    <label><b> Duration </b></label> {{busroute.duration}}
+  </div>
+  <div>
+    <label><b> available Seats </b></label> {{busroute.availableSeats}}
+  </div>
+  <div>
+    <label><b> Source </b></label> {{busroute.source}}
+  </div>
+  <div>
+    <label><b> Destination </b></label> {{busroute.destination}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="gotoList()" class="btn btn-primary">Back to Bus Route List</button><br>
+</div>
+</div>
+</div>
+</div>
+</div>

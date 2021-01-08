@@ -1,0 +1,53 @@
+<!-- <p>bus-booking works!</p>
+{{id}} -->
+<!-- {{itemList|json}} -->
+
+<div class="container mt-4 row text-center" *ngIf="booking">
+    <div class="row justify-content-center ">
+      <div class="col-md-10 ">
+          <div class="row text-center">
+              <h6 class=" text-capitalize col-md-12 mb-3 text-center">Booking Status</h6>
+            </div>
+      
+        <div class="row mb-3 card card-body text-center" style="width : 70rem;">
+  
+          <table class="table">
+  
+            <thead>
+              <tr>
+                
+                  <th>Bus Number</th>
+                  <th>Route</th>
+                  <th>BookingId</th>
+                  <th>Passanger Name</th>
+                  <th>Total Fare</th>
+                  <th>Booking Date Time</th>
+                  <th>Date Of Journey</th>
+                  <th>Seat No</th>
+                  <th>Payment Status</th>
+                  
+                  <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                
+                <td> <h6>{{booking.busId.busNumber}}</h6></td>
+                <td>{{booking.routeId.busRoute}}</td>
+                <td>{{booking.bookingId}}</td>
+                <td>{{booking.passangerDetails.passangerName}}</td>
+                <td>{{booking.totalFare}}</td>
+                <td>{{booking.bookingDateTime}}</td>
+                <td>{{booking.dateOfJourney}}</td>
+                <td>{{booking.seatNo}}</td>
+                <td>{{booking.paymentStatus}}</td>
+                <td>
+                
+            
+              
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+   

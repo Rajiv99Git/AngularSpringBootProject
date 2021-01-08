@@ -1,0 +1,53 @@
+<div class="container">
+ 
+    <mat-card class="card" >
+        <form (ngSubmit)="onSubmit()" [formGroup]="formupdatebusdetail" >
+            <h1 style="text-align: center">Update Bus Details</h1>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Bus Number</mat-label>
+                <input matInput placeholder="Enter Bus Number" formControlName="busnumber" [(ngModel)]="bus.busNumber" required>
+            </mat-form-field>
+<br>
+       <!-- <mat-form-field class="field" appearance="outline">
+                 <mat-label>Bus Type</mat-label>
+                 <input matInput placeholder="Enter Bus Type" >
+        </mat-form-field>-->
+ 
+<br>
+ 
+<mat-form-field appearance="fill">
+    <mat-label>Select Bus Type</mat-label>
+    <mat-select  formControlName="bustype" [(ngModel)]="bus.busType" required>
+      <mat-option value="AC">AC</mat-option>
+      <mat-option value="OrdinaryBus">Ordinary Bus</mat-option>
+      <mat-option value="Volvo">Volvo</mat-option>
+    </mat-select>
+  </mat-form-field>
+ 
+<br>
+            <mat-form-field class="field" width=100px appearance="outline">
+                <mat-label>Bus Fare</mat-label>
+                <input matInput placeholder="450"  formControlName="busfare"  [(ngModel)]="bus.baseFare" required>
+            </mat-form-field>
+ 
+<br>
+            <mat-form-field appearance="outline">
+                <mat-label>Number of Seats</mat-label>
+                <input matInput placeholder="1" formControlName="busseats" [(ngModel)]="bus.noOfSeats" required>
+              </mat-form-field>
+ 
+  
+            
+ 
+<br>
+ 
+            <div class="text-center">
+ 
+                <button type="submit" mat-raised-button color="primary" [disabled]="!formupdatebusdetail.valid">submit</button>
+ 
+                <button type="reset" mat-raised-button color="accent">Reset</button>
+            </div>
+        </form>
+ 
+    </mat-card>
+</div>

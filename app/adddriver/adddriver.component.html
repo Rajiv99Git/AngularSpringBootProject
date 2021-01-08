@@ -1,0 +1,60 @@
+<div class="container mt-4 ">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-8 block" style="
+    height: 340px;
+    margin-bottom: 28px;
+  ">
+<h3>DriverDetails</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">name</label>
+      <input type="text" class="form-control" id="Name" required [(ngModel)]="driver.driverName" name="DriverName">
+    </div>
+
+ 
+          
+<div [hidden]="submitted" style="width: 400px;">
+
+      <div class="form-group">
+        <label for="name">phone</label>
+        <input type="text" class="form-control" id="phone" required [(ngModel)]="driver.driverPhone" name="DriverPhone">
+      </div>
+   
+        <div class="form-group">
+          <label for="driverDob">DOB</label>
+          <input type="date" class="form-control" id="driverDob" required [(ngModel)]="driver.driverDob" name="driverDob">
+        </div>
+      
+        <div class="form-group">
+              <label for="driverGender">Gender</label>
+              <input type="text" class="form-control" id="driverGender" required [(ngModel)]="driver.driverGender" name="driverGender">
+        </div>
+        <div class="form-group">
+                <label for="driverAddress">ADDRESS</label>
+                <input type="text" class="form-control" id="driverAddress" required [(ngModel)]="driver.driverAddress" name="driverAddress">
+        </div>
+        <div class="form-group">
+            <label for="driverEmail">EMAIL</label>
+            <input type="text" class="form-control" id="driverEmail" required [(ngModel)]="driver.driverEmail" name="driverEmail">
+    </div>
+    <div class="form-group">
+        <label for=" driverIdProofType">PROOF TYPE</label>
+        <input type="text" class="form-control" id=" driverIdProofType" required [(ngModel)]="driver. driverIdProofType" name=" driverIdProofType">
+</div>
+<div class="form-group">
+    <label for=" driverIdProofNumber">Number</label>
+    <input type="text" class="form-control" id=" driverIdProofType" required [(ngModel)]="driver. driverIdProofNumber" name=" driverIdProofNumber">
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  
+</div>
+
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+

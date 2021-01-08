@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Passanger Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Address</th>
+            <th>Dob</th>
+            <th>Email</th>
+            <th>Gender</th>
+           
+            <th>Id Proof Type</th>
+            <th>Id Proof Number</th>
+            <th>Name</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let p of passanger |async">
+            <td>{{p.passangerAddress}}</td>
+            <td>{{p.passangerDob}}</td>
+            <td>{{p.passangerEmail}}</td>
+            <td>{{p.passangerGender}}</td>
+         
+           
+          
+            <td>{{p.passangerIdProofType}}</td>
+            <td>{{p.passangerIdProofNumber}}</td>
+            <td>{{p.passangerName}}</td>
+      
+            
+            <td>{{p.passangerPhone}}</td>
+         
+            
+           </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+

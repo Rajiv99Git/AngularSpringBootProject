@@ -1,0 +1,11 @@
+.card button{
+    margin: 20px;
+    
+}
+
+.card{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

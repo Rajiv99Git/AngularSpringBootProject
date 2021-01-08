@@ -1,0 +1,47 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Bus Route Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Driver Id</th>
+            <th>Bus Id</th>
+            <th>Bus Route</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Seats</th>
+            <th>Duration</th>
+            <th>Distance</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of route | async">
+            <td>{{b.driver.driverId}}</td>
+           
+            <td>{{b.busId.busId}}</td>
+            <td>{{b.busRoute}}</td>
+            <td>{{b.startTime}}</td>
+            <td>{{b.endTime}}</td>
+            <td>{{b.availableSeats}}</td>
+            <td>{{b.distance}}</td>
+            <td>{{b.source}}</td>
+            <td>{{b.destination}}</td>
+            <td>
+            <td><button (click)="deleteBusRoute(b.routeId,b.driver.driverId,b.busId.busId)" class="btn btn-danger">Delete</button>
+                <button (click)="BusRouteDetails(b.routeId,b.driver.driverId,b.busId.busId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="BusRouteUpdate(b.routeId,b.driver.driverId,b.busId.busId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              </td>
+              <td>
+              <button (click)="AddBusRoute(b.driver.driverId,b.busId.busId)" class="btn btn-info" style="margin-left: 10px">Add</button>
+              </td>
+            </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>

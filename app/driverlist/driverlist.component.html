@@ -1,0 +1,41 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Driver Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Driver Name</th>
+            <th> Driver Dob</th>
+            <th> Driver Phone</th>
+            <th> Driver Gender</th>
+            <th>Driver Address</th>
+            <th>Driver Email</th>
+            <th>Driver Proof Type</th>
+            <th>Driver Proof Address</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let d of driver | async">
+            <td>{{d.driverName}}</td>
+            <td>{{d.driverDob}}</td>
+            <td>{{d.driverPhone}}</td>
+            <td>{{d.driverGender}}</td>
+            <td>{{d.driverAddress}}</td>
+            <td>{{d.driverEmail}}</td>
+            <td>{{d.driverIdProofType}}</td>
+            <td>{{d.driverIdProofNumber}}</td>
+            <td>
+            <td><button (click)="deleteDriver(d.driverId)" class="btn btn-danger">Delete</button>
+                <button (click)="DriverDetails(d.driverId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="DriverUpdate(d.driverId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              </td>
+          </tr>
+          <button (click)="AddDriver()" class="btn btn-info" style="margin-left: 10px">Add</button>
+        </tbody>
+      </table>
+    </div>
+  </div>
+

@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="panel-heading">
+        <mat-icon (click)="home()" aria-hidden="false" aria-label="Example home icon">home</mat-icon><br>
+     
+    </div>
+      <h2>Bus Route Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Driver Id</th>
+            <th>Bus Id</th>
+            <th>Bus Route</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+            <th>Seats</th>
+            <th>Duration</th>
+            <th>Distance</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of route | async">
+            <td>{{b.driver.driverId}}</td>
+           
+            <td>{{b.busId.busId}}</td>
+            <td>{{b.busRoute}}</td>
+            <td>{{b.startTime}}</td>
+            <td>{{b.endTime}}</td>
+            <td>{{b.availableSeats}}</td>
+            <td>{{b.distance}}</td>
+            <td>{{b.source}}</td>
+            <td>{{b.destination}}</td>
+            
+            <td><button (click)="deleteBusRoute(b.routeId)" class="btn btn-danger">Delete</button>
+                
+                <button (click)="BusRouteUpdate(b.routeId,b.driver.driverId,b.busId.busId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              </td>
+              
+            </tr>
+            <button (click)="AddBusRoute()" class="btn btn-info" style="margin-left: 10px">Add</button>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,35 @@
+<div class="container mt-4 ">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="row">
+        <div class="col-md-8 block" style="
+
+  height: 340px;
+  margin-bottom: 28px;
+">
+<h2>  bus  Details</h2> 
+
+<hr/>
+<div *ngIf="bus">
+  <div>
+    <label><b>Bus Number: </b></label> {{bus.busNumber}}
+  </div>
+  <div>
+    <label><b>Type </b></label> {{bus.busType}}
+  </div>
+  <div>
+    <label><b> Base Fare </b></label> {{bus.baseFare}}
+  </div>  
+  <div>
+    <label><b> Number od seats</b></label> {{bus.noOfSeats}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="gotoList()" class="btn btn-primary">Back to Bus List</button><br>
+</div>
+</div>
+</div>
+</div>
+</div>

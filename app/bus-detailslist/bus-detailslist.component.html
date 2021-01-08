@@ -1,0 +1,45 @@
+
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Bus Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Bus Number</th>
+            <th>Bus Type</th>
+            <th>Bus Fare</th>
+            <th>Bus Seats</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of bus | async">
+            <td>{{b.busNumber}}</td>
+            <td>{{b.busType}}</td>
+            <td>{{b.baseFare}}</td>
+            <td>{{b.noOfSeats}}</td>
+            <td>
+              <div class="menu">
+
+                <div class="container">
+                  <div class="row justify-content-center">
+                   <div class="col-md-7">
+              <ul>
+                <li (click)="deleteBus(b.busId)">Delete</li>
+                <li (click)="BusDetails(b.busId)">Details</li>
+                 <li (click)="BusUpdate(b.busId)">Update</li>
+                
+              </ul>
+                   </div>
+                  </div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <button (click)="AddBus()" class="btn btn-info" style="margin-left: 10px">Add</button>
+        </tbody>
+      </table>
+    </div>
+  </div>

@@ -1,0 +1,84 @@
+<div class="container">
+
+    <mat-card class="card" >
+        <form (ngSubmit)="doSubmitForm()" [formGroup]="form" >
+            <h1 style="text-align: center">Driver Registration Form</h1>
+            <mat-form-field class="field" appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Enter Name" formControlName="name" [(ngModel)]="driverDetails.driverName" required>
+            </mat-form-field>
+<br>
+            <mat-label name="gender" style="margin: 10px;">Gender</mat-label>
+            <mat-radio-group aria-label="Select an option" [ngModelOptions]="{standalone: true}" [(ngModel)]="driverDetails.driverGender" >
+                <mat-radio-button style="margin: 10px;" value="Male">Male</mat-radio-button>
+                <mat-radio-button  value="Female">Female</mat-radio-button>
+              </mat-radio-group>
+<br>
+            <!-- <mat-form-field class="field" appearance="outline">
+                <mat-label name="gender" >Gender</mat-label> -->
+                
+            <!-- </mat-form-field> -->
+
+<br>
+            <mat-form-field class="field" width=100px appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com"  formControlName="email"
+                    [(ngModel)]="driverDetails.driverEmail" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+
+<br>
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="dob" [(ngModel)]="driverDetails.driverDob" required>
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+
+<br>
+            
+                <mat-form-field class="example-full-width">
+                <mat-label>Telephone</mat-label>
+                <span matPrefix>+91 &nbsp;</span>
+                <input type="tel" matInput placeholder="555-555-1234" formControlName="phone" [(ngModel)]="driverDetails.driverPhone">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+                     
+<br>
+
+              <mat-form-field class="field" appearance="outline">
+                <mat-label>Address</mat-label>
+                <input matInput placeholder="Enter Address"  formControlName="address" [(ngModel)]="driverDetails.driverAddress" required>
+            </mat-form-field>
+<br>
+            <mat-form-field  class="example-full-width">
+                <mat-label>ID Proof Type</mat-label>
+                <mat-select name="type" [ngModelOptions]="{standalone: true}" [(ngModel)]="driverDetails.driverIdProofType" required>
+                <mat-option value="Aadhaar Card" >Aadhaar Card</mat-option>
+                <mat-option value="PAN Card" >PAN Card</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <br>
+            
+                <mat-form-field class="example-full-width">
+                <mat-label>Id Proof Number</mat-label>
+                <input type="tel" matInput placeholder="555-555-1234" formControlName="idnumber" [(ngModel)]="driverDetails.driverIdProofNumber" required>
+                <mat-icon matSuffix>mode_edit</mat-icon>
+                </mat-form-field>
+           
+            
+
+            
+
+            <br>
+
+            <div class="text-center">
+
+                <button type="submit" mat-raised-button color="primary" [disabled]="!form.valid">submit</button>
+
+                <button type="reset" mat-raised-button color="accent">Reset</button>
+            </div>
+        </form>
+
+    </mat-card>
+</div>

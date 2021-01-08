@@ -1,0 +1,52 @@
+<div class="container mt-4 row text-center" *ngIf="itemList">
+    <div class="row justify-content-center ">
+      <div class="col-md-10 ">
+          <div class="row text-center">
+              <h6 class=" text-capitalize col-md-12 mb-3 text-center">{{itemList.source}} - Leaving To on Date</h6>
+            </div>
+      
+        <div class="row mb-3 card card-body text-center" style="width : 70rem;">
+  
+         
+  
+          <table class="table">
+  
+            <thead>
+              <tr>
+                  <th>Bus Number</th>
+                  <th>Driver Name</th>
+                  <th>Bus Route</th>
+                  <th>Start Time</th>
+                  <th>End Time</th>
+                  <th>Duration</th>
+                  <th>availableSeats</th>
+                  <th>distance</th>
+                  <th>source</th>
+                  <th>destination</th>
+                  <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let b of itemList">
+                <td> <h6>{{b.busId.busNumber}}</h6></td>
+                <td>{{b.driver.driverName}}</td>
+                <td>{{b.busRoute}}</td>
+                <td>{{b.startTime}}</td>
+                <td>{{b.endTime}}</td>
+                <td>{{b.duration}}</td>
+                <td>{{b.availableSeats}}</td>
+                <td>{{b.distance}}</td>
+                <td>{{b.source}}</td>
+                <td>{{b.destination}}</td>
+                <td><button class="btn btn-block mt-3 btn-search btn-sm"
+                     (click)="onClick(b.routeId)" > Book</button> </td>
+               
+              </tr>
+    
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+

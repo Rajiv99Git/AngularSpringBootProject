@@ -1,0 +1,36 @@
+<mat-card class="card">
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <mat-icon (click)="home()" aria-hidden="false" aria-label="Example home icon">home</mat-icon><br>
+      <h2>Bus Details</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Bus Number</th>
+            <th>Bus Type</th>
+            <th>Bus Fare</th>
+            <th>Bus Seats</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let b of bus | async">
+            <td>{{b.busNumber}}</td>
+            <td>{{b.busType}}</td>
+            <td>{{b.baseFare}}</td>
+            <td>{{b.noOfSeats}}</td>
+            
+            <td><button (click)="deleteBus(b.busId)" class="btn btn-danger">Delete</button>
+                
+                <button (click)="BusUpdate(b.busId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              </td>
+          </tr>
+          <button (click)="AddBus()" class="btn btn-info" style="margin-left: 10px">Add</button>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+</mat-card>

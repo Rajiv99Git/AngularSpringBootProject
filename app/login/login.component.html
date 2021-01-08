@@ -1,0 +1,37 @@
+<div class="container mt-4 ">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <div class="row">
+          <div class="col-md-8 block" style="
+    height: 340px;
+    margin-bottom: 28px;
+  ">
+    
+<form [formGroup]="form" #LoginInformation (ngSubmit)="Login(LoginInformation)"  text-align: center>  
+  
+  <div class="row">  
+    <div class="form-group">  
+        <label for="email"> Email </label>  
+        <input formControlName="email" class="form-control  form-control-sm" type="text">   
+    </div>  
+  </div>  
+  
+  <div class="row">  
+    <div class="form-group">  
+        <label for="password"> Password </label>  
+        <input formControlName="password" class="form-control  form-control-sm" type="password">   
+    </div>  
+  </div>  
+  
+  <div class="row" style="margin-top: 40px;">  
+    <div class="col-md-offset-1 col-md-4">  
+        <button class="btn btn-md btn-primary btn-style"  >Login</button>  
+    </div>  
+  </div>  
+ 
+</form>
+</div>  
+</div>
+</div>
+</div>
+</div>
